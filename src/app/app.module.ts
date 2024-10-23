@@ -4,14 +4,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AppComponent } from './app.component';
-import { PromptInputComponent } from './components/prompt-input/prompt-input.component'; // Adjust the path as necessary
 
 @NgModule({
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule
+    // BrowserModule,
+    // BrowserAnimationsModule,
+    // MatFormFieldModule,
+    // MatInputModule,
   ],
   declarations: [
   ],
@@ -19,4 +18,4 @@ import { PromptInputComponent } from './components/prompt-input/prompt-input.com
 export class AppModule { }
 
 // Replace NgModule bootstrap with bootstrapApplication
-bootstrapApplication(AppComponent);
+// bootstrapApplication(AppComponent);

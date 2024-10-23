@@ -19,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatProgressSpinnerModule,
     FormsModule
-  ]
+  ],
+  providers: [AssistantService],
 })
 export class PromptInputComponent {
   prompt: string = '';
