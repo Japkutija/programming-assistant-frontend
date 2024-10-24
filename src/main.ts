@@ -9,7 +9,6 @@ bootstrapApplication(AppComponent, {
     importProvidersFrom(
       BrowserAnimationsModule,
       HttpClientModule
-      // Add other modules if needed
     ),
   ],
 }).catch((err) => console.error(err));
