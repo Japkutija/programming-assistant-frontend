@@ -1,1 +1,2 @@
-<app-prompt-input></app-prompt-input>
+<app-prompt-input (responseEvent)="handleResponse($event)"></app-prompt-input>
+<app-response-display [response]="response"></app-response-display>
