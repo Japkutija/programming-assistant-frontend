@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-prompt-input',
@@ -20,7 +21,8 @@ import { CommonModule } from '@angular/common';
     MatButtonModule,
     MatProgressSpinnerModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    MatCardModule,
   ],
   providers: [AssistantService],
 })

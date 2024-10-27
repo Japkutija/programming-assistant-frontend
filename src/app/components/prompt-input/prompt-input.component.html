@@ -1,36 +1,36 @@
-<div>
-  <mat-form-field appearance="outline" class="full-width">
-    <textarea
-      matInput
-      placeholder="Enter your programming question"
-      [(ngModel)]="prompt"
-      rows="5"
-    ></textarea>
-  </mat-form-field>
-</div>
+<mat-card>
+  <mat-card-content>
+    <mat-form-field appearance="outline" class="full-width">
+      <textarea
+        matInput
+        placeholder="Enter your programming question"
+        [(ngModel)]="prompt"
+        rows="5"
+      ></textarea>
+    </mat-form-field>
 
-<div>
-  <mat-radio-group [(ngModel)]="selectedModel">
-    <mat-radio-button value="chatgpt">ChatGPT</mat-radio-button>
-    <mat-radio-button value="gemini">Gemini</mat-radio-button>
-  </mat-radio-group>
-</div>
+    <div class="options">
+      <mat-radio-group [(ngModel)]="selectedModel">
+        <mat-radio-button value="chatgpt">ChatGPT</mat-radio-button>
+        <mat-radio-button value="gemini">Gemini</mat-radio-button>
+      </mat-radio-group>
 
-<div>
-  <button mat-raised-button color="primary" (click)="submitPrompt()" [disabled]="isLoading">
-    Submit
-  </button>
-</div>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="submitPrompt()"
+        [disabled]="isLoading"
+      >
+        Submit
+      </button>
+    </div>
 
-<div *ngIf="isLoading">
-  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
-</div>
+    <div *ngIf="isLoading" class="loading">
+      <mat-progress-spinner mode="indeterminate" diameter="30"></mat-progress-spinner>
+    </div>
 
-<div *ngIf="errorMessage" class="error">
-  {{ errorMessage }}
-</div>
-
-<div *ngIf="response">
-  <h3>Response:</h3>
-  <p>{{ response }}</p>
-</div>
+    <div *ngIf="errorMessage" class="error">
+      {{ errorMessage }}
+    </div>
+  </mat-card-content>
+</mat-card>
