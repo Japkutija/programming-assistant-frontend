@@ -8,28 +8,28 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-prompt-input',
   standalone: true,
   templateUrl: './prompt-input.component.html',
-  styleUrl: './prompt-input.component.css',
+  styleUrls: ['./prompt-input.component.css'],
   imports: [
+    FormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    FormsModule,
-    CommonModule,
     MatCardModule,
+    MatIconModule,
+    CommonModule
   ],
-  providers: [AssistantService],
 })
 export class PromptInputComponent {
   prompt: string = '';
   selectedModel: string = 'chatgpt';
-  response: string = '';
   isLoading: boolean = false;
   errorMessage: string = '';
 
@@ -52,7 +52,7 @@ export class PromptInputComponent {
     requestObservable.subscribe({
       next: (res) => {
         this.isLoading = false;
-        this.responseEvent.emit(res); // Emit the response
+        this.responseEvent.emit(res);
       },
       error: (err) => {
         console.error('Error:', err);

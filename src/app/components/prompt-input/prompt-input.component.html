@@ -1,34 +1,43 @@
 <mat-card>
   <mat-card-content>
+    <!-- Prompt Input -->
     <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Enter your programming question:</mat-label>
       <textarea
         matInput
-        placeholder="Enter your programming question"
+        placeholder="Enter your programming question here..."
         [(ngModel)]="prompt"
-        rows="5"
+        rows="4"
       ></textarea>
     </mat-form-field>
 
+    <!-- AI Model Selection -->
     <div class="options">
-      <mat-radio-group [(ngModel)]="selectedModel">
+      <span class="model-selection-label">Select AI Model:</span>
+      <mat-radio-group [(ngModel)]="selectedModel" class="model-selection">
         <mat-radio-button value="chatgpt">ChatGPT</mat-radio-button>
         <mat-radio-button value="gemini">Gemini</mat-radio-button>
       </mat-radio-group>
+    </div>
 
+    <!-- Submit Button -->
+    <div class="submit-button">
       <button
         mat-raised-button
-        color="primary"
+        color="accent"
         (click)="submitPrompt()"
         [disabled]="isLoading"
       >
-        Submit
+        <mat-icon>send</mat-icon> Submit
       </button>
     </div>
 
+    <!-- Loading Spinner -->
     <div *ngIf="isLoading" class="loading">
       <mat-progress-spinner mode="indeterminate" diameter="30"></mat-progress-spinner>
     </div>
 
+    <!-- Error Message -->
     <div *ngIf="errorMessage" class="error">
       {{ errorMessage }}
     </div>

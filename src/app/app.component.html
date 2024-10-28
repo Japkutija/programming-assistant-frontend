@@ -2,5 +2,11 @@
   <span>Programming Assistant</span>
 </mat-toolbar>
 
-<app-prompt-input (responseEvent)="handleResponse($event)"></app-prompt-input>
-<app-response-display [response]="response"></app-response-display>
+<div class="container">
+  <app-prompt-input (responseEvent)="handleResponse($event)"></app-prompt-input>
+  <app-response-display [response]="response"></app-response-display>
+</div>
+
+<mat-toolbar color="primary" class="footer">
+  <span class="footer-text">© 2023 Programming Assistant. All rights reserved.</span>
+</mat-toolbar>

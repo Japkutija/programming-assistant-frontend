@@ -8,8 +8,18 @@
   margin-top: 16px;
 }
 
-.options mat-radio-group {
-  flex-grow: 1;
+.model-selection-label {
+  margin-right: 16px;
+  font-weight: 500;
+}
+
+.model-selection {
+  display: flex;
+  gap: 16px;
+}
+
+.submit-button {
+  margin-top: 24px;
 }
 
 .loading {
