@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar style="background-color: #3f51b5; color: white;">
   <span>Programming Assistant</span>
 </mat-toolbar>
 
@@ -7,6 +7,16 @@
   <app-response-display [response]="response"></app-response-display>
 </div>
 
-<mat-toolbar color="primary" class="footer">
-  <span class="footer-text">© 2023 Programming Assistant. All rights reserved.</span>
+<!-- Spacer to push footer to the bottom if content is minimal -->
+<div class="footer-spacer"></div>
+
+<mat-toolbar class="footer">
+  <div class="footer-content">
+    <div class="footer-text" >© 2023 Programming Assistant. All rights reserved.</div>
+    <div class="social-icons">
+      <mat-icon>facebook</mat-icon>
+      <mat-icon>linkedin</mat-icon>
+    </div>
+  </div>
 </mat-toolbar>
+

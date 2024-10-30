@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ResponseDisplayComponent } from './components/response-display/response-display.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbar } from '@angular/material/toolbar';
+import { MatIcon } from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @Component({
@@ -21,6 +23,8 @@ import { MatToolbar } from '@angular/material/toolbar';
     MatToolbar,
     MatCardModule,
     MatGridListModule,
+    MatIcon,
+    MatDividerModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
