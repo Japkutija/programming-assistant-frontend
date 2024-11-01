@@ -1,3 +1,10 @@
+.prompt-card {
+  margin-top: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
 .full-width {
   width: 100%;
 }
@@ -5,30 +12,30 @@
 .options {
   display: flex;
   align-items: center;
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 
 .model-selection-label {
-  margin-right: 16px;
+  margin-right: 1rem;
   font-weight: 500;
 }
 
 .model-selection {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .submit-button {
-  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 
 .loading {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 
 .error {
   color: red;
-  margin-top: 16px;
+  margin-top: 1rem;
 }

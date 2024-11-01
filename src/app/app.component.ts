@@ -32,7 +32,7 @@ import {MatDividerModule} from '@angular/material/divider';
 export class AppComponent {
   title = 'programming-assistant-frontend';
 
-  response: string = '';
+  response: string = 'Hello! How can I assist you today?';
 
   handleResponse(response: string) {
     this.response = response;
