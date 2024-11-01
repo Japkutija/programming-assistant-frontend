@@ -2,6 +2,9 @@
   max-width: 50rem;
   margin: 1.5rem auto;
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .mat-toolbar {
